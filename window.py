@@ -13,13 +13,13 @@ class Window:
         self.__root.update_idletasks()
         self.__root.update()
 
-    def wait_for_close():
+    def wait_for_close(self):
         self.__running = True
         while self.__running:
             self.redraw()
         print("window is closed")
 
-    def close():
+    def close(self):
         self.__running = False
     
-    
+
