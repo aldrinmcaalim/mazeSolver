@@ -1,4 +1,4 @@
-from graphics import Line, Point
+from window import Line, Point
 
 class Cell:
     def __init__(self, win):
@@ -20,13 +20,13 @@ class Cell:
         self.__y2 = y2
         if self.has_left_wall:
             line = Line(Point(x1, y1), Point(x1, y2))
-            self._win.draw_line(line)
+            self.__win.draw_line(line)
         if self.has_top_wall:
             line = Line(Point(x1, y1), Point(x2, y1))
             self.__win.draw_line(line)
         if self.has_right_wall:
             line = Line(Point(x2, y1), Point(x2, y2))
-            self._win.draw_line(line)
+            self.__win.draw_line(line)
         if self.has_bottom_wall:
             line = Line(Point(x1, y2), Point(x2, y2))
-            self._win.draw_line(line)
+            self.__win.draw_line(line)
