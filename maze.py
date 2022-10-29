@@ -13,4 +13,20 @@ class Maze:
         self._cell_size_y = cell_size_y
         self._win = win
 
-        
+    def _create_cells(self):
+        for i in range(self._num_cols):
+            col_cell = []
+            for j in range(self._num_rows):
+                col_cells.append(Cell(self._win))
+            self._cells.append(col_cells)
+        for i in range(self._num_cols):
+            for j in range(self._num_rows):
+                self._draw_cell(i, j)
+    
+    def _draw_cell(self, i, j):
+        pass
+
+    def _animate(self):
+        pass
+
+    
