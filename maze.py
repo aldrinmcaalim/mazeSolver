@@ -24,7 +24,15 @@ class Maze:
                 self._draw_cell(i, j)
     
     def _draw_cell(self, i, j):
-        pass
+        if self._win is None:
+            return
+        
+        x1 = self._x1 + i * self._cell_size_x
+        y1 = self._y1 + j * self._cell_size_y
+        x2 = x1 + self._cell_size_x
+        y2 = y1 + self._cell_size_y
+        self._cells[i][j].draw(x1, y1, x2, y2)
+        self._animate()
 
     def _animate(self):
         pass
