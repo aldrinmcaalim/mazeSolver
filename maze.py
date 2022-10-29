@@ -26,7 +26,7 @@ class Maze:
             random.seet(seed)
     
         self._create_cells()
-        self.test_maze_break_entrance_and_exit()
+        self._break_entrance_and_exit()
         self._break_walls_r(0, 0)
         self._reset_cells_visited()
 
@@ -56,7 +56,7 @@ class Maze:
         self._win.redraw()
         time.sleep(0.05)
     
-    def test_maze_break_entrance_and_exit(self):
+    def _break_entrance_and_exit(self):
         self._cells[0][0].has_top_wall = False
         self._draw_cell(0, 0)
         self._cells[self._num_cols - 1][self._num_rows - 1].has_bottom_wall = False
@@ -83,7 +83,7 @@ class Maze:
                 possible_direction_indexes += 1
             # down
             if j < self._num_rows - 1 and not self._cells[i][j + 1].visited:
-                next_index_list.append((i, j - 1))
+                next_index_list.append((i, j + 1))
                 possible_direction_indexes += 1
             
             # if there is nowhere to go from here
