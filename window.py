@@ -28,7 +28,7 @@ class Window:
 class Point:
     def __init__(self, x, y):
         self.x = x
-        self. y = y
+        self.y = y
 
 class Line:
     def __init__(self, point1, point2):
